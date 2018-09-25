@@ -1,0 +1,48 @@
+<head>
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <div class="row justify-content-md-center">
+      <div class="col-sm-8">
+        <div>
+          <h1 class="text-center">Monthly Expenses Tracker</h1>
+          <form (ngSubmit)="submitForm(expenseObj)">
+            <div class="w3-container">
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Expense Name:   </label>
+                <input type="text" class="form-control" name="Name" [(ngModel)]="expenseObject.ExpenseName" id="exampleFormControlInput1" placeholder="Enter the expense name">
+              </div>
+            </div>
+
+            <div class="w3-container">
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Expense Description:   </label>
+                <input type="text" class="form-control" name="Description" [(ngModel)]="expenseObject.Description" id="exampleFormControlInput2" placeholder="Enter the expense description">
+              </div>
+            </div>
+
+            <div class="w3-container">
+              <div class="form-group">
+                <label for="exampleFormControlInput3">Amount Spent:  </label>
+                <input type="Number" class="form-control" name="Amount" [(ngModel)]="expenseObject.ExpenseAmount" id="exampleFormControlInput3" placeholder="Enter the amount">
+              </div>
+            </div>
+              
+            <div class="w3-container">
+              <div class="form-group">
+                <label for="exampleFormControlInput4">Purchase Date</label>
+                <input type="date" class="form-control" name="purchase date" [(ngModel)]="expenseObject.PurchaseDate" id="exampleFormControlInput4">
+              </div>
+            </div>
+  
+  
+            <div class="w3-container">
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">Save Expense</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      </div>
+  

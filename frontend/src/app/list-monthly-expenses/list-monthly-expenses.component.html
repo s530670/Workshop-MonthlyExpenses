@@ -1,0 +1,13 @@
+<!-- <p>
+  list-monthly-expenses works!
+</p> -->
+
+
+
+<li *ngFor="let expense of summary">
+  <!-- {{$count+1}}  -->
+  Expense name is:   {{ expense.ExpenseName }} <br>
+  Expense description is:   {{ expense.Description }} <br>
+  Expense amount is:   {{ expense.ExpenseAmount }} <br>  
+  Purchase date is:   {{ expense.PurchaseDate }} 
+</li>

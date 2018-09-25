@@ -1,0 +1,37 @@
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<!-- </head> -->
+<h1>The summary of the expense details saved by the you is:</h1>
+
+<p>
+  <b>ExpenseName:</b>&nbsp;&nbsp;&nbsp;{{summary?.ExpenseName}}<br>
+  <b>Description:</b>&nbsp;&nbsp;&nbsp;{{summary?.Description}} <br>
+   <b>ExpenseAmount:</b>&nbsp;&nbsp;&nbsp;{{summary?.ExpenseAmount}}
+  <!-- ,
+  PurchaseDate: {{summary?.PurchaseDate.toString().substring(0,10) -->
+  <!-- }} -->
+</p>
+
+
+<div class="row justify-content-md-center">
+    <div class="col-sm-8">
+  <div>
+    <h1 >Expense Information</h1>
+    <form (ngSubmit)="submitForm()">
+
+      <div class="w3-container">
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Add Another Expense</button>
+        </div>
+      </div>
+    </form>
+    <form (ngSubmit)="listMonthlyExpenses()">
+    <div class="w3-container">
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">List All Expenses</button>
+      </div>
+    </div>
+  </form>
+
+  </div>
+</div>
+</div>
