@@ -306,15 +306,15 @@ var DataService = /** @class */ (function () {
     }
     DataService.prototype.addUser = function (item) {
         return this.http.post("http://localhost:3000/saveExpense", item);
-        // return this.http.post("  https://work-shop-.herokuapp.com//saveExpense",item)
+        // return this.http.post("/saveExpense",item)
     };
     DataService.prototype.getUserDetail = function () {
         return this.http.get("http://localhost:3000/getExpenseLast");
-        // return this.http.get("  https://work-shop-.herokuapp.com//getExpenseLast")
+        // return this.http.get("/getExpenseLast")
     };
     DataService.prototype.getMonthlyDetail = function () {
         return this.http.get("http://localhost:3000/getMonthlyExpenseList");
-        // return this.http.get("  https://work-shop-.herokuapp.com//getMonthlyExpenseList")
+        // return this.http.get("/getMonthlyExpenseList")
     };
     DataService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
