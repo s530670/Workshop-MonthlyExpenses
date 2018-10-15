@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n   <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n  </head>\n  <div class=\"row justify-content-md-center\">\n      <div class=\"col-sm-8\">\n        <div>\n          <h1 class=\"text-center\">Monthly Expenses Tracker</h1>\n          <form (ngSubmit)=\"submitForm(expenseObj)\">\n            <div class=\"w3-container\">\n              <div class=\"form-group\">\n                <label for=\"exampleFormControlInput1\">Expense Name:   </label>\n                <input type=\"text\" class=\"form-control\" name=\"Name\" [(ngModel)]=\"expenseObject.ExpenseName\" id=\"exampleFormControlInput1\" placeholder=\"Enter the expense name\">\n              </div>\n            </div>\n\n            <div class=\"w3-container\">\n              <div class=\"form-group\">\n                <label for=\"exampleFormControlInput1\">Expense Description:   </label>\n                <input type=\"text\" class=\"form-control\" name=\"Description\" [(ngModel)]=\"expenseObject.Description\" id=\"exampleFormControlInput2\" placeholder=\"Enter the expense description\">\n              </div>\n            </div>\n\n            <div class=\"w3-container\">\n              <div class=\"form-group\">\n                <label for=\"exampleFormControlInput3\">Amount Spent:  </label>\n                <input type=\"Number\" class=\"form-control\" name=\"Amount\" [(ngModel)]=\"expenseObject.ExpenseAmount\" id=\"exampleFormControlInput3\" placeholder=\"Enter the amount\">\n              </div>\n            </div>\n              \n            <div class=\"w3-container\">\n              <div class=\"form-group\">\n                <label for=\"exampleFormControlInput4\">Purchase Date</label>\n                <input type=\"date\" class=\"form-control\" name=\"purchase date\" [(ngModel)]=\"expenseObject.PurchaseDate\" id=\"exampleFormControlInput4\">\n              </div>\n            </div>\n  \n  \n            <div class=\"w3-container\">\n              <div class=\"form-group\">\n                <button class=\"btn btn-primary\" type=\"submit\">Save Expense</button>\n              </div>\n            </div>\n          </form>\n        </div>\n      </div>\n      </div>\n  "
+module.exports = "<head>\r\n   <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\r\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\r\n  </head>\r\n  <div class=\"row justify-content-md-center\">\r\n      <div class=\"col-sm-8\">\r\n        <div>\r\n          <h1 class=\"text-center\">Monthly Expenses Tracker</h1>\r\n          <form (ngSubmit)=\"submitForm(expenseObj)\">\r\n            <div class=\"w3-container\">\r\n              <div class=\"form-group\">\r\n                <label for=\"exampleFormControlInput1\">Expense Name:   </label>\r\n                <input type=\"text\" class=\"form-control\" name=\"Name\" [(ngModel)]=\"expenseObject.ExpenseName\" id=\"exampleFormControlInput1\" placeholder=\"Enter the expense name\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"w3-container\">\r\n              <div class=\"form-group\">\r\n                <label for=\"exampleFormControlInput1\">Expense Description:   </label>\r\n                <input type=\"text\" class=\"form-control\" name=\"Description\" [(ngModel)]=\"expenseObject.Description\" id=\"exampleFormControlInput2\" placeholder=\"Enter the expense description\">\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"w3-container\">\r\n              <div class=\"form-group\">\r\n                <label for=\"exampleFormControlInput3\">Amount Spent:  </label>\r\n                <input type=\"Number\" class=\"form-control\" name=\"Amount\" [(ngModel)]=\"expenseObject.ExpenseAmount\" id=\"exampleFormControlInput3\" placeholder=\"Enter the amount\">\r\n              </div>\r\n            </div>\r\n              \r\n            <div class=\"w3-container\">\r\n              <div class=\"form-group\">\r\n                <label for=\"exampleFormControlInput4\">Purchase Date</label>\r\n                <input type=\"date\" class=\"form-control\" name=\"purchase date\" [(ngModel)]=\"expenseObject.PurchaseDate\" id=\"exampleFormControlInput4\">\r\n              </div>\r\n            </div>\r\n  \r\n  \r\n            <div class=\"w3-container\">\r\n              <div class=\"form-group\">\r\n                <button class=\"btn btn-primary\" type=\"submit\">Save Expense</button>\r\n              </div>\r\n            </div>\r\n          </form>\r\n        </div>\r\n      </div>\r\n      </div>\r\n  "
 
 /***/ }),
 
@@ -175,7 +175,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<router-outlet></router-outlet>\n"
+module.exports = "\r\n\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -305,15 +305,15 @@ var DataService = /** @class */ (function () {
         this.http = http;
     }
     DataService.prototype.addUser = function (item) {
-        return this.http.post("http://localhost:3000/saveExpense", item);
+        return this.http.post("/saveExpense", item);
         // return this.http.post("/saveExpense",item)
     };
     DataService.prototype.getUserDetail = function () {
-        return this.http.get("http://localhost:3000/getExpenseLast");
+        return this.http.get("/getExpenseLast");
         // return this.http.get("/getExpenseLast")
     };
     DataService.prototype.getMonthlyDetail = function () {
-        return this.http.get("http://localhost:3000/getMonthlyExpenseList");
+        return this.http.get("/getMonthlyExpenseList");
         // return this.http.get("/getMonthlyExpenseList")
     };
     DataService = __decorate([
@@ -367,7 +367,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"> -->\n<!-- </head> -->\n<h1>The summary of the expense details saved by the you is:</h1>\n\n<p>\n  <b>ExpenseName:</b>&nbsp;&nbsp;&nbsp;{{summary?.ExpenseName}}<br>\n  <b>Description:</b>&nbsp;&nbsp;&nbsp;{{summary?.Description}} <br>\n   <b>ExpenseAmount:</b>&nbsp;&nbsp;&nbsp;{{summary?.ExpenseAmount}}\n  <!-- ,\n  PurchaseDate: {{summary?.PurchaseDate.toString().substring(0,10) -->\n  <!-- }} -->\n</p>\n\n\n<div class=\"row justify-content-md-center\">\n    <div class=\"col-sm-8\">\n  <div>\n    <h1 >Expense Information</h1>\n    <form (ngSubmit)=\"submitForm()\">\n\n      <div class=\"w3-container\">\n        <div class=\"form-group\">\n          <button class=\"btn btn-primary\" type=\"submit\">Add Another Expense</button>\n        </div>\n      </div>\n    </form>\n    <form (ngSubmit)=\"listMonthlyExpenses()\">\n    <div class=\"w3-container\">\n      <div class=\"form-group\">\n        <button class=\"btn btn-primary\" type=\"submit\">List All Expenses</button>\n      </div>\n    </div>\n  </form>\n\n  </div>\n</div>\n</div>\n"
+module.exports = "<!-- <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"> -->\r\n<!-- </head> -->\r\n<h1>The summary of the expense details saved by the you is:</h1>\r\n\r\n<p>\r\n  <b>ExpenseName:</b>&nbsp;&nbsp;&nbsp;{{summary?.ExpenseName}}<br>\r\n  <b>Description:</b>&nbsp;&nbsp;&nbsp;{{summary?.Description}} <br>\r\n   <b>ExpenseAmount:</b>&nbsp;&nbsp;&nbsp;{{summary?.ExpenseAmount}}\r\n  <!-- ,\r\n  PurchaseDate: {{summary?.PurchaseDate.toString().substring(0,10) -->\r\n  <!-- }} -->\r\n</p>\r\n\r\n\r\n<div class=\"row justify-content-md-center\">\r\n    <div class=\"col-sm-8\">\r\n  <div>\r\n    <h1 >Expense Information</h1>\r\n    <form (ngSubmit)=\"submitForm()\">\r\n\r\n      <div class=\"w3-container\">\r\n        <div class=\"form-group\">\r\n          <button class=\"btn btn-primary\" type=\"submit\">Add Another Expense</button>\r\n        </div>\r\n      </div>\r\n    </form>\r\n    <form (ngSubmit)=\"listMonthlyExpenses()\">\r\n    <div class=\"w3-container\">\r\n      <div class=\"form-group\">\r\n        <button class=\"btn btn-primary\" type=\"submit\">List All Expenses</button>\r\n      </div>\r\n    </div>\r\n  </form>\r\n\r\n  </div>\r\n</div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -459,7 +459,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <p>\n  list-monthly-expenses works!\n</p> -->\n\n\n\n<li *ngFor=\"let expense of summary\">\n  <!-- {{$count+1}}  -->\n  Expense name is:   {{ expense.ExpenseName }} <br>\n  Expense description is:   {{ expense.Description }} <br>\n  Expense amount is:   {{ expense.ExpenseAmount }} <br>  \n  Purchase date is:   {{ expense.PurchaseDate }} \n</li>\n"
+module.exports = "<!-- <p>\r\n  list-monthly-expenses works!\r\n</p> -->\r\n\r\n\r\n\r\n<li *ngFor=\"let expense of summary\">\r\n  <!-- {{$count+1}}  -->\r\n  Expense name is:   {{ expense.ExpenseName }} <br>\r\n  Expense description is:   {{ expense.Description }} <br>\r\n  Expense amount is:   {{ expense.ExpenseAmount }} <br>  \r\n  Purchase date is:   {{ expense.PurchaseDate }} \r\n</li>\r\n"
 
 /***/ }),
 
@@ -578,7 +578,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\S530488\Desktop\Workshop\Workshop-MonthlyExpenses\frontend\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\S530670\Desktop\Workshop-MonthlyExpenses\frontend\src\main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -9,19 +9,19 @@ export class DataService {
   constructor(private http:HttpClient) { }
 
   addUser(item){
-    return this.http.post("http://localhost:3000/saveExpense",item)
+    return this.http.post("/saveExpense",item)
     // return this.http.post("/saveExpense",item)
   }
 
   getUserDetail()
   {
-    return this.http.get("http://localhost:3000/getExpenseLast")
+    return this.http.get("/getExpenseLast")
     // return this.http.get("/getExpenseLast")
   }
 
   getMonthlyDetail()
   {
-    return this.http.get("http://localhost:3000/getMonthlyExpenseList")
+    return this.http.get("/getMonthlyExpenseList")
     // return this.http.get("/getMonthlyExpenseList")
   }
 
